@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+airflow_venv/
+
+# Environment variables / secrets
+.env
+
+# Logs
+logs/
+
+# Generated data files
+# data/raw/*.csv
+# data/staging/*.csv
+# data/cleaned/*.csv
+# data/rejected/*.csv
+# data/analytical/*.csv
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MLflow local database
+mlflow.db
+
+# Airflow local files
+airflow/*.db
+airflow/*.db-*
+airflow/*.json.generated
+airflow/airflow.cfg
