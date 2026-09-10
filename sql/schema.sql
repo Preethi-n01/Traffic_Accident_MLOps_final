@@ -1,0 +1,71 @@
+-- Table: public.accident_weather_mart
+
+-- DROP TABLE IF EXISTS public.accident_weather_mart;
+
+CREATE TABLE IF NOT EXISTS public.accident_weather_mart
+(
+    collision_index character varying(50) COLLATE pg_catalog."default",
+    collision_year integer,
+    collision_ref_no character varying(50) COLLATE pg_catalog."default",
+    location_easting_osgr double precision,
+    location_northing_osgr double precision,
+    longitude double precision,
+    latitude double precision,
+    police_force integer,
+    collision_severity integer,
+    number_of_vehicles integer,
+    number_of_casualties integer,
+    date date,
+    day_of_week integer,
+    "time" time without time zone,
+    local_authority_district integer,
+    local_authority_ons_district character varying(20) COLLATE pg_catalog."default",
+    local_authority_highway character varying(20) COLLATE pg_catalog."default",
+    local_authority_highway_current character varying(20) COLLATE pg_catalog."default",
+    first_road_class integer,
+    first_road_number integer,
+    road_type integer,
+    speed_limit integer,
+    junction_detail_historic integer,
+    junction_detail integer,
+    junction_control integer,
+    second_road_class integer,
+    second_road_number integer,
+    pedestrian_crossing_human_control_historic integer,
+    pedestrian_crossing_physical_facilities_historic integer,
+    pedestrian_crossing integer,
+    light_conditions integer,
+    weather_conditions integer,
+    road_surface_conditions integer,
+    special_conditions_at_site integer,
+    carriageway_hazards_historic integer,
+    carriageway_hazards integer,
+    urban_or_rural_area integer,
+    did_police_officer_attend_scene_of_accident integer,
+    trunk_road_flag integer,
+    lsoa_of_accident_location character varying(20) COLLATE pg_catalog."default",
+    enhanced_severity_collision integer,
+    collision_injury_based integer,
+    collision_adjusted_severity_serious double precision,
+    collision_adjusted_severity_slight double precision,
+    weather_code_api double precision,
+    temperature_mean double precision,
+    temperature_max double precision,
+    temperature_min double precision,
+    precipitation double precision,
+    rain double precision,
+    snowfall double precision,
+    wind_speed_max double precision,
+    weather_available integer,
+    weather_condition character varying(100) COLLATE pg_catalog."default",
+    hour integer,
+    year integer,
+    month integer,
+    day integer,
+    weekday character varying(20) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.accident_weather_mart
+    OWNER to postgres;
