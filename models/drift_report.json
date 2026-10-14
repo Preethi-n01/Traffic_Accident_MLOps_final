@@ -1,0 +1,98 @@
+{
+    "project": "Traffic Accident Severity Analytics and Prediction",
+    "method": "Population Stability Index (PSI)",
+    "reference_period": "2025-01-01 to 2025-08-31",
+    "current_period": "2025-09-01 to 2025-10-31",
+    "reference_records": 66738,
+    "current_records": 17194,
+    "drift_threshold": 0.2,
+    "features_monitored": 16,
+    "drift_detected": true,
+    "drifted_features": [
+        "temperature_mean",
+        "weather_condition"
+    ],
+    "feature_results": [
+        {
+            "feature": "police_force",
+            "psi": 0.000251,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "day_of_week",
+            "psi": 0.004553,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "number_of_vehicles",
+            "psi": 0.000109,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "first_road_class",
+            "psi": 0.000571,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "road_type",
+            "psi": 0.000405,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "speed_limit",
+            "psi": 0.000659,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "junction_detail",
+            "psi": 0.000228,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "junction_control",
+            "psi": 0.000243,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "light_conditions",
+            "psi": 0.013335,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "weather_conditions",
+            "psi": 0.059886,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "road_surface_conditions",
+            "psi": 0.062974,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "urban_or_rural_area",
+            "psi": 0.000144,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "temperature_mean",
+            "psi": 2.315205,
+            "status": "DRIFT_DETECTED"
+        },
+        {
+            "feature": "precipitation",
+            "psi": 0.097404,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "wind_speed_max",
+            "psi": 0.180336,
+            "status": "NO_SIGNIFICANT_DRIFT"
+        },
+        {
+            "feature": "weather_condition",
+            "psi": 0.299054,
+            "status": "DRIFT_DETECTED"
+        }
+    ],
+    "interpretation": "PSI below 0.10: little distribution change; 0.10 to below 0.20: moderate change; 0.20 or above: substantial change requiring investigation. Drift does not necessarily mean model performance has declined."
+}

@@ -41,3 +41,15 @@ airflow/*.db
 airflow/*.db-*
 airflow/*.json.generated
 airflow/airflow.cfg
+# Local MLflow tracking artifacts
+mlruns/
+
+# Large locally generated Random Forest model (over 100 MB)
+models/accident_severity_pipeline.joblib
+
+# Local MLflow database files
+mlflow.db-shm
+mlflow.db-wal
+
+# Python cache
+__pycache__/

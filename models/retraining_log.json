@@ -1,0 +1,11 @@
+{
+    "runs": [
+        {
+            "timestamp_utc": "2026-10-14T19:07:38.767134+00:00",
+            "training_script": "src/modeling/train_xgboost.py",
+            "model_path": "models/accident_severity_xgboost.joblib",
+            "status": "success",
+            "note": "Training rerun using the existing dataset and configuration. Review evaluation metrics before deployment."
+        }
+    ]
+}

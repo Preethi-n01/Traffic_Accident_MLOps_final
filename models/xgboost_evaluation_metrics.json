@@ -1,0 +1,12 @@
+{
+    "model": "XGBClassifier",
+    "random_state": 42,
+    "features_count": 49,
+    "train_records": 66738,
+    "validation_records": 17194,
+    "test_records": 17591,
+    "validation_accuracy": 0.5430964289868558,
+    "validation_macro_f1": 0.378947334980007,
+    "validation_fatal_recall": 0.36585365853658536,
+    "validation_serious_recall": 0.489281507656066
+}

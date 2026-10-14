@@ -1,0 +1,9 @@
+{
+    "model": "XGBClassifier",
+    "test_period": "2025-11-01 to 2025-12-31",
+    "test_records": 17591,
+    "accuracy": 0.563697345233358,
+    "macro_f1": 0.3899885662762849,
+    "fatal_recall": 0.41295546558704455,
+    "serious_recall": 0.4721180880974695
+}
