@@ -1,0 +1,70 @@
+{
+  "model": "RandomForestClassifier",
+  "target": "collision_severity",
+  "split": "chronological 80/20",
+  "train_rows": 81218,
+  "test_rows": 20305,
+  "feature_count": 49,
+  "accuracy": 0.7036690470327506,
+  "macro_f1": 0.38753117828238803,
+  "macro_recall": 0.3808592709497311,
+  "training_seconds": 25.24,
+  "sklearn_version": "1.9.0",
+  "classes": [
+    1,
+    2,
+    3
+  ],
+  "confusion_matrix": [
+    [
+      9,
+      95,
+      189
+    ],
+    [
+      15,
+      1210,
+      3691
+    ],
+    [
+      25,
+      2002,
+      13069
+    ]
+  ],
+  "classification_report": {
+    "1": {
+      "precision": 0.1836734693877551,
+      "recall": 0.030716723549488054,
+      "f1-score": 0.05263157894736842,
+      "support": 293.0
+    },
+    "2": {
+      "precision": 0.3658905352283036,
+      "recall": 0.24613506916192027,
+      "f1-score": 0.2942964854675909,
+      "support": 4916.0
+    },
+    "3": {
+      "precision": 0.7710779397014573,
+      "recall": 0.8657260201377849,
+      "f1-score": 0.8156654704322047,
+      "support": 15096.0
+    },
+    "accuracy": 0.7036690470327506,
+    "macro avg": {
+      "precision": 0.44021398143917195,
+      "recall": 0.3808592709497311,
+      "f1-score": 0.38753117828238803,
+      "support": 20305.0
+    },
+    "weighted avg": {
+      "precision": 0.6645026730089216,
+      "recall": 0.7036690470327506,
+      "f1-score": 0.6784274078716975,
+      "support": 20305.0
+    }
+  },
+  "mlflow_run_id": "9a4c19dc44b94615980dbdb4d9e13cf9",
+  "registered_model_name": "TrafficAccidentSeverity"
+}

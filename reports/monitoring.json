@@ -1,0 +1,107 @@
+{
+  "rows_checked": 101523,
+  "baseline_rows": 71066,
+  "recent_rows": 30457,
+  "test_rows": 20305,
+  "date_range": {
+    "start": "2025-01-01",
+    "end": "2025-12-31"
+  },
+  "input_quality": {
+    "duplicate_rows": 0,
+    "missing_values_total": 14616,
+    "missing_values_by_column": {
+      "weather_code_api": 1827,
+      "temperature_mean": 1827,
+      "temperature_max": 1827,
+      "temperature_min": 1827,
+      "precipitation": 1827,
+      "rain": 1827,
+      "snowfall": 1827,
+      "wind_speed_max": 1827
+    }
+  },
+  "severity_distribution": {
+    "1": 1453,
+    "2": 25190,
+    "3": 74880
+  },
+  "drift": {
+    "comparison": "first 70% chronological baseline vs latest 30% data",
+    "class_tvd": 0.00455091011868222,
+    "location_grid_tvd": 0.03261515230671957,
+    "numeric_feature_psi": {
+      "latitude": 0.0014551124732847425,
+      "longitude": 0.0010274508224468245,
+      "speed_limit": 0.0011037338977469718,
+      "number_of_vehicles": 0.004492362026151689,
+      "number_of_casualties": 0.00018978994734815998,
+      "temperature_mean": 1.335263160041168,
+      "precipitation": 0.13974686112255355,
+      "wind_speed_max": 0.1887689934640977
+    },
+    "categorical_feature_tvd": {
+      "weather_condition": 0.14348343753453324,
+      "urban_or_rural_area": 0.014255896370565384,
+      "road_type": 0.010482189436835807,
+      "light_conditions": 0.20594270601692785,
+      "weather_conditions": 0.1335271924406883
+    }
+  },
+  "model_performance": {
+    "evaluation_window": "latest 20% of labeled records",
+    "macro_f1": 0.38753117828238803,
+    "macro_recall": 0.3808592709497311,
+    "classes": [
+      1,
+      2,
+      3
+    ],
+    "confusion_matrix": [
+      [
+        9,
+        95,
+        189
+      ],
+      [
+        15,
+        1210,
+        3691
+      ],
+      [
+        25,
+        2002,
+        13069
+      ]
+    ],
+    "false_negative_rate_by_class": {
+      "1": 0.9692832764505119,
+      "2": 0.7538649308380797,
+      "3": 0.13427397986221515
+    },
+    "prediction_batch_latency_ms": 1255.617,
+    "prediction_latency_ms_per_row": 0.061838
+  },
+  "retraining_criteria": {
+    "class_tvd_threshold": 0.1,
+    "location_grid_tvd_threshold": 0.2,
+    "numeric_feature_psi_threshold": 0.2,
+    "fatal_false_negative_rate_threshold": 0.2
+  },
+  "alerts": [
+    "Input feature drift exceeds the threshold for: light_conditions, temperature_mean.",
+    "Fatal-severity false-negative rate (0.969) exceeds 0.200."
+  ],
+  "retraining_reasons": [
+    "Input feature drift exceeds the threshold for: light_conditions, temperature_mean.",
+    "Fatal-severity false-negative rate (0.969) exceeds 0.200."
+  ],
+  "api_runtime": {
+    "status": "not_configured"
+  },
+  "runtime_alert_thresholds": {
+    "api_request_failure_rate": 0.05,
+    "api_p95_latency_ms": 1000.0
+  },
+  "retraining_recommended": true
+}
